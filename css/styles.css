@@ -175,6 +175,8 @@ body {
   width: 100%;
 }
 
+
+/*** WORK ***/
 .featured-work {
   grid-area: featuredWork;
   background-color: #705d5f;
@@ -184,7 +186,61 @@ body {
 
 .featured-work img {
   width: 100%;
+  height: 100%;
+  border-radius: 12px;
   grid-column: 1 / 3;
+}
+
+.overlay{
+  position:absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0e1114;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.overlay_text{
+  color: #fff;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card{
+  position: relative;
+}
+
+.featured-work .card:hover .overlay{
+  opacity: 1;
+}
+
+.link{
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #f0c382;
+  border-radius: 290486px;
+  padding: .8rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  transition: all .3s ease-in-out;
+}
+
+.link:hover{
+  background-color: #f0c382;
+  border-radius: 290486px;
 }
 
 .footer {
@@ -313,7 +369,7 @@ body {
 
   .featured-work {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr); //was 4
     grid-auto-rows: 100px 1fr 1fr;
     grid-gap: 20px;
   }
